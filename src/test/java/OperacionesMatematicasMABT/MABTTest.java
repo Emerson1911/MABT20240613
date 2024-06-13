@@ -1,17 +1,29 @@
 package OperacionesMatematicasMABT;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class MABTTest {
+MABT mABT;
 
-    @Test
+    @BeforeEach
     void setUp() {
+        mABT=new MABT();
     }
 
-    @Test
+    @AfterEach
     void tearDown() {
+        mABT=null;
+    }
+    @BeforeAll
+    static void  alIniciarTodasLasPruevas(){
+        System.out.println("Iniciar todas las pruevas");
+    }
+
+    @AfterAll
+    static void alFinalizarTodasLasPruevas(){
+        System.out.println("Finalizar todas las pruevas");
     }
 
     @Test
